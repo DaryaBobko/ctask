@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import AuthLayout from './app/components/layout/auth_layout/index';
+import MainLayout from './app/components/layout/main_layout/index';
 
-import AuthLayout from './app/components/auth_layout/index';
-import MainLayout from './app/components/main_layout/index';
+
 import './App.css';
 
 class App extends Component {
@@ -10,7 +11,8 @@ class App extends Component {
     return (
       <Router>
         <Route exact path="/" component={AuthLayout} />
-        <Route path="/home" component={MainLayout} />
+        <Route  path="/home" component={MainLayout} >
+        </Route> 
       </Router>
     );
   }

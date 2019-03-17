@@ -1,0 +1,33 @@
+.home_top_filters {
+  height: 60px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 29px;
+}
+
+.home_top_filters .home_wrapper_filter:first-child{
+  margin-right: 22.5px;
+}
+
+.home_top_filters .home_wrapper_filter:last-child{
+  margin-left: 22.5px;
+}
+
+.home_top_label {
+  margin-right: 15px;
+  font-family: sans-serif;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media screen and (max-width: 739px) {
+  .home_top_filters .home_wrapper_filter:first-child{
+    margin-right: 17.5px;
+  }
+  .home_top_filters .home_wrapper_filter:last-child{
+    margin-left: 17.5px;
+  }
+}
