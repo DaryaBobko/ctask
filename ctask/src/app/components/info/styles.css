@@ -23,7 +23,7 @@
   color: #5c5c5c;
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 376px) {
   .info_main  {
     margin: 24px 25px;
     width: calc(100% - 50px);

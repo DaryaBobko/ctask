@@ -4,9 +4,10 @@
   border-radius: 11px;
   border: solid 1px #979797;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 376px) {
   .default_input {
     width: 72px;
   }

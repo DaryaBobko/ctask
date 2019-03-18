@@ -37,6 +37,12 @@
 }
 
 @media screen and (max-width: 739px) {
+  .menu_list{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 376px) {
   .menu_main {
     height: 77px;
     padding: 20px 25px;

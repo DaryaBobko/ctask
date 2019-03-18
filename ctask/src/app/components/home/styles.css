@@ -23,7 +23,29 @@
   text-align: center;
 }
 
-@media screen and (max-width: 739px) {
+.home_container {
+  position: relative;
+  height: calc(100vh - 116px);
+}
+
+.home_wrapper_information_bar {
+  padding-top: 16px;
+}
+
+.add_img {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.add_img:hover { 
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 376px) {
   .home_top_filters .home_wrapper_filter:first-child{
     margin-right: 17.5px;
   }

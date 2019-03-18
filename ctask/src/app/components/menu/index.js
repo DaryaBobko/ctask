@@ -1,8 +1,10 @@
    
 import React, { Component } from 'react';
-import './styles.css';
-import Logo from '../../../public/logo.svg'
 import { Link } from 'react-router-dom';
+
+
+import Logo from '../../../public/logo.svg'
+import './styles.css';
 
 class Menu extends Component {
   constructor({match}) {

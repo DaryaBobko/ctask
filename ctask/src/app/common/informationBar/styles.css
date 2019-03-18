@@ -1,0 +1,44 @@
+.information_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 34px 0;
+}
+
+.information_bar_icon {
+  margin-right: 46px;
+  transition: 0.5s;
+}
+
+.information_bar_icon:hover { 
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.information_wrapper_fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.information_wrapper_fields span {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.information_wrapper_fields span:last-child {
+  margin-bottom: 0px;
+}
+
+.information_date {
+  margin-bottom: 9px;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 376px) {
+  .information_bar {
+    border-bottom: 1px solid #eaeaea;
+  }
+}
