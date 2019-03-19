@@ -5,6 +5,11 @@
   border: solid 1px #979797;
   background-color: #ffffff;
   box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.default_input:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 376px) {

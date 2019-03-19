@@ -7,6 +7,26 @@ import './styles.css';
 
 
 class Form extends Component {
+
+  state= {
+    distance: '',
+    time: '',
+    date: ''
+  }
+
+  saveJog = () => {
+    const payload = {
+      distance: this.state.distance,
+      time: this.state.time,
+      date: this.state.date
+    }
+
+    this.sendRequest('/v1/data/jog', 'POST', payload)
+      .then((response) => {
+          return response.json();
+      });
+  }
+
   render() {
 
     return (
@@ -15,17 +35,17 @@ class Form extends Component {
           <img src={Icon} alt='icon' className='form_icon'/>
           <div className='form_wrapper_field'>
             <span><strong>Distance: </strong></span>
-            <Input className='custom_input'/>
+            <Input type='number' className='custom_input' value={this.state.distance} onChange={(e) => this.setState({distance: e.target.value})}/>
           </div>
           <div className='form_wrapper_field'>
             <span><strong>Time: </strong></span>
-            <Input className='custom_input'/>
+            <Input type='number' className='custom_input' value={this.state.time} onChange={(e) => this.setState({time: e.target.value})}/>
           </div>
           <div className='form_wrapper_field'>
             <span><strong>Date: </strong></span>
-            <Input className='custom_input'/>
+            <Input type='date' className='custom_input' value={this.state.date} onChange={(e) => this.setState({date: e.target.value})}/>
           </div>
-          <Button linkTo='/home' className='custom_button'>Let me in</Button>
+          <Button linkTo='/home' className='custom_button' onClick={this.saveJog}>Save</Button>
         </form>
       </div>
     );

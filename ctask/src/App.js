@@ -6,7 +6,24 @@ import MainLayout from './app/components/layout/main_layout/index';
 
 import './App.css';
 
+Component.prototype.sendRequest = (url, method, payload = undefined) => {
+  return fetch('https://jogtracker.herokuapp.com/api' + url, {
+    body: JSON.stringify(payload), 
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    headers: {
+      'content-type': 'application/json',
+      'Authorization': localStorage.getItem('Authorization')
+    },
+    method: method,
+    mode: 'cors',
+    redirect: 'follow',
+    referrer: 'no-referrer',
+  })
+}
+
 class App extends Component {
+  
   render() {
     return (
       <Router>
